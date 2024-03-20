@@ -108,9 +108,15 @@ fun FinalView(
         }
         if (isLampOn) {
             BottomSliderView(
-                modifier = Modifier.offset(y = (screenHeight - 200.dp)),
+                modifier = Modifier.offset(y = (screenHeight - 250.dp)),
                 lightAlpha = lightAlpha
             ) { lightAlpha = it }
+        }
+        Box(modifier = Modifier.align(Alignment.BottomEnd)) {
+            LightStatusButton(
+                backgroundColor = if (isLampOn) Color.Green else Color.Red,
+                text = if (isLampOn) "O N" else "O F F"
+            )
         }
     }
 }

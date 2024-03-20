@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-private fun LightStatusButton(
+fun LightStatusButton(
     backgroundColor: Color = Color.Green,
     text: String = "O N",
     cornerRadius: Dp = 20.dp
